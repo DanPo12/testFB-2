@@ -5,9 +5,10 @@ def main():
   t = Turtle()
   t.width(3)          # set the width to something exemple 2 pixels 
   t.screen.bgcolor("white")
-
-#  drawAxes()
-  drawCircles()
+  drawAxes()
+#  drawCircles()
+  # Your code to draw circles
+  input("Press Enter to exit...")
 
 def drawCircles():
   from turtle import Turtle
@@ -24,7 +25,6 @@ def drawCircles():
     t.circle(radius)  # this will draw the desired circle
     radius *= 2       # increase the radius of the next circle
     t.penup()         # not to start drawing yet
-
 
 def drawAxes():
   from turtle import Turtle
