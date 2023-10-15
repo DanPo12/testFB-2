@@ -1,12 +1,23 @@
 # mon gros test
 def main():
+  import os
   from turtle import Turtle
-  
+
+  # Set the terminal window size (rows x columns)
+  rows = 400  # Set the number of rows you want
+  columns = 600  # Set the number of columns you want
+
+  # Use ANSI escape codes to set the window size
+  os.system(f"printf '\033[8;{rows};{columns}t'")
+
+  # https://docs.python.org/3/library/turtle.html#turtle.Turtle
+  # https://docs.python.org/3/library/turtle.html#turtle.Screen
+    
   t = Turtle()
   t.width(3)          # set the width to something exemple 2 pixels 
   t.screen.bgcolor("white")
   drawAxes()
-#  drawCircles()
+  drawCircles()
   # Your code to draw circles
   input("Press Enter to exit...")
 
@@ -16,8 +27,8 @@ def drawCircles():
   t = Turtle()
   t.home()
   # print(t.pos())
-  radius = 100
-  numberOfCircles = 2
+  radius = 150
+  numberOfCircles = 1
   for _i in range(numberOfCircles):  # draw circles
     t.penup()         # not to start drawing yet
     t.goto(0,-radius) # 
